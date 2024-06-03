@@ -1,0 +1,12 @@
+[book]
+authors = ["lislis"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Intro to Physical Computing"
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output.html]
+preferred-dark-theme = "ayu"
