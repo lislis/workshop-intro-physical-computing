@@ -4,7 +4,12 @@
 
 # Day 1
 
-- [What is physical computing?](./day1/intro.md)
+- [What is physical computing?](./day1/01-what-is-pc.md)
+  - [Inputs & Outputs](./day1/01-01-inputs-outputs.md)
+  - [Signals](./day1/01-02-signals.md)
+- [Computers](./day1/01-03-computers.md)
+  - [Arduino](./day1/01-04-arduino.md)
+  - [Raspberry Pi](./day1/01-05-raspi.md)
 - [Circuits](./day1/intro.md)
 - [Components](./day1/intro.md)
 - [[Circuit 1.1] LED](./day1/intro.md)
