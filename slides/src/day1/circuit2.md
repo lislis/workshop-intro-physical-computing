@@ -1,0 +1,9 @@
+# [Circuit 1.2] Button
+
+Let's add a button to turn the LED on and off.
+
+![button](/assets/button.png)
+
+Try to replicate this circuit on your breadboards:
+
+![circuit button and led](/assets/circuit-btn.png)
