@@ -10,10 +10,10 @@ Big thanks to Stefan Püst for the original workshop and materials!
 
 ## Build
 
-Created using `mdbook` and `mdbook-mermaid`. To build it yourself run (assuming [Rust toolchain](https://www.rust-lang.org/tools/install) installed)
+Created using `mdbook`. To build it yourself run (assuming [Rust toolchain](https://www.rust-lang.org/tools/install) installed)
 
 ``` shell
-$ cargo install mdbook mdbook-mermaid
+$ cargo install mdbook
 $ mdbook build
 ```
 Then serve the output statically.
