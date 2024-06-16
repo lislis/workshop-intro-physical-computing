@@ -33,7 +33,7 @@ For interfacing with wifi or bluetooth I recommend an [ESP32](https://www.espres
 
 IDE 1.x was based on the Processing IDE.
 
-IDE 2.x is a rewrite using Electron which was ... a choice, but it's the new standard so we'll roll with it.
+IDE 2.x is a rewrite using VS Code/ Electron which was ... a choice, but it's the new standard so we'll roll with it.
 
 [Download the Arduino IDE 2.x here](https://www.arduino.cc/en/software).
 

@@ -17,9 +17,10 @@
 - [Parts & Components](./day1/02-components.md)
 - [[Circuit 1.1] LED](./day1/circuit1.md)
 - [[Circuit 1.2] Button](./day1/circuit2.md)
-- [Ardunio and Arduino IDE](./day1/intro.md)
-- [[Circuit 1.3] Programmed LED blink](./day1/intro.md)
-- [[Circuit 1.4] Programmed Button](./day1/intro.md)
+- [Ardunio and Arduino IDE](./day1/04-arduino-ide.md)
+- [[Circuit 1.3] Hello, World! (Blinking LED)](./day1/circuit-3.md)
+- [[Circuit 1.4] Programmed Button](./day1/circuit-4.md)
+- [[Circuit 1.5] Cycle through LEDs](./day1/circuit-5.md)
 
 # Day 2
 
