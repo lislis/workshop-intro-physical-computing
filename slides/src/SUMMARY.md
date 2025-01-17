@@ -12,31 +12,32 @@
 
 - [Parts & components](basics/parts-components.md)
 
-- [[Circuit 1.1] LED](basics/circuit1.md)
-- [[Circuit 1.2] Button](basics/circuit2.md)
+    - [[Circuit 1.1] Light up LED](basics/circuit1.md)
+    - [[Circuit 1.2] Button press](basics/circuit2.md)
 
 - [Arduino & Arduino IDE](basics/arduino-ide.md)
 
-- [[Circuit 1.3] Hello, World! (Blinking LED)](basics/circuit-3.md)
-- [[Circuit 1.4] Programmed Button](basics/circuit-4.md)
-- [[Circuit 1.5] Cycle through LEDs](basics/circuit-5.md)
+    - [[Circuit 1.3] Hello, World! (Blinking LED)](basics/circuit-3.md)
+    - [[Circuit 1.4] Programmed Button](basics/circuit-4.md)
+    - [[Circuit 1.5] Cycle through LEDs](basics/circuit-5.md)
 
-# Sensors
+# Reading and sensing
 
-- [Sensors](./day2/intro.md)
-  - [Temperature DHT22](./day2/intro.md)
-  - [Distance](./day2/intro.md)
-- [Components cont,](./day2/intro.md)
-- [[Circuit 2.1] Sensor and LED](./day2/intro.md)
-- [Serial comms](./day2/intro.md)
-- [[Circuit 2.2] Serial read and write](./day2/intro.md)
-- [[Circuit 2.3] Freestyle](./day2/intro.md)
+- [Serial communication](sensors/serial.md)
+- [Sensors](sensors/sensors.md)
+  - [[Circuit 2.1] Reading potentiometer](sensors/circuit-1.md)
+- [Arduino Libraries](sensors/libs.md)
+  - [[Circuit 2.2] Digital temperature](sensors/circuit-2.md)
+- [Common sensors](sensors/list.md)
 
 # Motors
 
-## Outlook
-
-[Where to go from here]()
+- [DC-motors](motors/motors.md)
+  - [[Circuit 3.1] Powering DC-motor](motors/circuit-1.md)
+- [Transistors](motors/transistors.md)
+  - [[Circuit 3.2] DC-motor with transistor](motors/circuit-2.md)
+- [Servos](motors/servo.md)
+- [Steppers](motors/stepper.md)
 
 -----------
 
