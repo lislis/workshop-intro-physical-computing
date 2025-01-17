@@ -12,7 +12,7 @@
     <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.css" -->
     <!-- This is the theme we prefer, which we take from highlight.js directly -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/idea.min.css">
-    <title>$TITLE</title>
+    <title>[</title>
     <style>
         .open-in-playground {
             background: #a42;
@@ -107,7 +107,54 @@
         <div class="slides">
             <section data-markdown>
                 <textarea data-template>
-$CONTENT
+# Circuit 1.3: Hello, blinky World!
+
+Making an LED blink is the hardware-equivalent of printing "Hello, Word!".
+
+---
+
+Change your circuit to this:
+
+![circuit with LED](/assets/simple_led_wiring.png)
+
+---
+
+Add this code, save and upload it to your Arduino:
+
+``` c
+void setup() {
+    pinMode(3, OUTPUT);
+}
+
+void loop() {
+    digitalWrite(3, HIGH);
+    delay(1000);
+    digitalWrite(3, LOW);
+    delay(1000);
+}
+```
+
+---
+
+It's nicer to put your pins into variables at the top.
+
+``` c
+
+#define LED_PIN 3
+// or int led_pin = 3;
+
+void setup() {
+    pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+    digitalWrite(LED_PIN, HIGH);
+    delay(1000);
+    digitalWrite(LED_PIN, LOW);
+    delay(1000);
+}
+```
+
                 </textarea>
             </section>
 
