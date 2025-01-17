@@ -10,3 +10,4 @@ command = "mdbook-mermaid"
 
 [output.html]
 preferred-dark-theme = "ayu"
+site-url = "/workshop-intro-physical-computing/"

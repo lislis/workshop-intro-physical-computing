@@ -6,7 +6,7 @@ Making an LED blink is the hardware-equivalent of printing "Hello, Word!".
 
 Change your circuit to this:
 
-![circuit with LED](/assets/simple_led_wiring.png)
+![circuit with LED](../assets/simple_led_wiring.png)
 
 ---
 

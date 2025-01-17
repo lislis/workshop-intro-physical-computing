@@ -14,19 +14,19 @@ What do we need?
 
 ### Arduino
 
-![arduino uno](/assets/uno.png)
+![arduino uno](../assets/uno.png)
 
 ---
 
 ### Breadboard
 
-![breadboard](/assets/breadboard.png)
+![breadboard](../assets/breadboard.png)
 
 ---
 
 ### Wires
 
-![wires](/assets/wires.png)
+![wires](../assets/wires.png)
 
 
 ## Components
@@ -35,18 +35,18 @@ What do we need?
 
 ### LEDs
 
-![les](/assets/led.png)
+![les](../assets/led.png)
 
 ---
 
 ### Resistors
 
-![resistors](/assets/resistors.png)
+![resistors](../assets/resistors.png)
 
-![resistor bands](/assets/resistor-bands.png)
+![resistor bands](../assets/resistor-bands.png)
 
 ---
 
 ### Buttons
 
-![buttons](/assets/button.png)
+![buttons](../assets/button.png)

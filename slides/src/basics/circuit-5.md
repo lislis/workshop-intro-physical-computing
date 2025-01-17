@@ -143,7 +143,7 @@ void loop() {
 
 Our buttons are mechanical but we treat their state als digital signals.
 
-![button signal](/assets/button-signal.png)
+![button signal](../assets/button-signal.png)
 
 ---
 

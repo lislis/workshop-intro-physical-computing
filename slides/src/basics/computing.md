@@ -24,7 +24,7 @@
 
 - Are in bascially everything
 
-![arduino](/assets/arduino.png) ![espressif](/assets/espressif.png)
+![arduino](../assets/arduino.png) ![espressif](../assets/espressif.png)
 
 
 ## Microprocessors
@@ -35,15 +35,15 @@
 
 - Runs an operating system
 
-![raspberry pi](/assets/raspi.png)
+![raspberry pi](../assets/raspi.png)
 
 ## Comparison
 
-![microcontroller vs microprocessor](/assets/micro.png)
+![microcontroller vs microprocessor](../assets/micro.png)
 
 ## Why these?
 
-- Widespread platforms, lots of ddocumentation
+- Widespread platforms, lots of documentation
 
 - Inexpensive
 
