@@ -27,7 +27,7 @@ void setup() {
 }
 
 void loop() {
-  buttonState = digitalRead(button_pin);
+  button_state = digitalRead(button_pin);
   digitalWrite(led_pin, button_state);
 }
 ```

@@ -6,7 +6,7 @@
 
 - Converts input to outputs
 
-- Must be program
+- Must be programmable
 
 - Digital device
 
@@ -14,7 +14,7 @@
 
 - Very application specific
 
-- Run one programmed
+- Run one program
 
 - Usually very cheap
 
