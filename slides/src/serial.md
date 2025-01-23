@@ -83,4 +83,4 @@ We can .read() (bytes) or .readString() (String), depending on what data you hav
 
 ---
 
-![serial console](../basics/serial.png)
+![serial console](../assets/serial.png)
