@@ -31,8 +31,6 @@
 - [Sensors](sensors/sensors.md)
   - [[Circuit 2.1] Ultrasonic distance](sensors/circuit-1.md)
 - [Arduino Libraries](sensors/libs.md)
-  - [[Circuit 2.2] Digital temperature](sensors/circuit-2.md)
-- [Common sensors](sensors/list.md)
 
 # Motors
 

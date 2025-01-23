@@ -44,4 +44,4 @@ void loop() {
 }
 ```
 
-Read about [pulseIn](https://reference.arduino.cc/reference/cs/language/functions/advanced-io/pulsein/).
+Read about [pulseIn()](https://reference.arduino.cc/reference/cs/language/functions/advanced-io/pulsein/).
