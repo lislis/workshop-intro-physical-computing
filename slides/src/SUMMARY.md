@@ -36,9 +36,6 @@
 
 - [Electro-magentism](motors/electromagnetism.md)
 - [DC-motors](motors/motors.md)
-  - [[Circuit 3.1] Powering DC-motor](motors/circuit-1.md)
-- [Transistors](motors/transistors.md)
-  - [[Circuit 3.2] DC-motor with transistor](motors/circuit-2.md)
 - [Servos](motors/servo.md)
 - [Steppers](motors/stepper.md)
 
