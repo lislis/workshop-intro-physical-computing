@@ -1,20 +1,47 @@
-# [Circuit 2.1] Reading a potentiometer
+# [Circuit 2.1] Ultrasonic distance sensor
 
-This is a simple circuit to read an analog value and introduces one of the most common components: the potentiometer aka the poti!
+A popular beginner sensor is the ultrasonic distance sensor HC-SR04.
 
----
-
-## Poti
-
-Potis are resistors that change their resistance according to their rotatry position. They come in various magnitudes, so depending on your circuit you might buy a 10k Ohm or 1M Ohm poti. Pay attention to whether a poti uses a linear or logarithmic scale for mapping rotatry position to resistance!
+Ultrasound! Like bats and dolphins!
 
 ---
 
+![hc-sr04](../assets/hc-sr04.jpg)
 
+Note the pin labeling, easy!
 
+---
 
-## Reading a photoresistor
+``` c++
+const int trigPin = 5;
+const int echoPin = 18;
 
-You can now read all kinds of resistor values! A fader is basically the exact same thing!
+#define SOUND_SPEED 0.034
 
-A photoresistor for example changes resistance based on the light shining on it. Try making a circuit that lights up an LED when a certain threshold in the resistance is reached. Expand it to a scale of LEDs, the brighter the light the more LEDs light up (See the example in the Arduino IDE for inspiration).
+long duration;
+float distance;
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+    digitalWrite(trigPin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigPin, LOW);
+
+    duration = pulseIn(echoPin, HIGH);
+    distance = duration * SOUND_SPEED/2;
+
+    Serial.println(distance);
+
+    delay(50);
+}
+```
+
+Read about [pulseIn](https://reference.arduino.cc/reference/cs/language/functions/advanced-io/pulsein/).

@@ -10,6 +10,10 @@ Instead of using it for purposes strictly for the circuit, we can read the chang
 
 ---
 
+Common analog "sensors" are photoresistors (measure direct light), rain or soil moisture sensors.
+
+---
+
 It's pretty straight forward, and basically you already know everything.
 
 ---
