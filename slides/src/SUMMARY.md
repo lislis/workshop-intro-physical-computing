@@ -39,6 +39,21 @@
 - [Servos](motors/servo.md)
 - [Steppers](motors/stepper.md)
 
+# ESP32
+
+- [ESP32](esp32/esp32.md)
+- [Webserver](esp32/esp-webserver.md)
+- [OSC](esp32/esp-osc.md)
+
+# Your environment
+
+- [Godot]()
+- [PureData]()
+- [Max/Msp]()
+- [TouchDesigner]()
+- [Unity3D]()
+- [Unreal]()
+
 -----------
 
 [Resources](./resources.md)

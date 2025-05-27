@@ -39,7 +39,7 @@ void setup() {
   # we have to initialize Serial in the setup
   Serial.begin(9600);
   # then we can print or println (with a line break)
-  Serial.println("Done with setup entering loop")
+  Serial.println("Done with setup entering loop");
 }
 
 void loop() {
@@ -55,12 +55,12 @@ We can also read from Serial, very useful when data comes from a program and the
 
 ``` c
 
-int letPin = 9;
+const int ledPin = 9;
 
 void setup() {
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
-  Serial.println("Done with setup entering loop")
+  Serial.println("Done with setup entering loop");
 }
 
 void loop() {
