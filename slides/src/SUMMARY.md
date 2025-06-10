@@ -47,7 +47,7 @@
 
 # Your environment
 
-- [Godot]()
+- [Godot](environments/godot.md)
 - [PureData]()
 - [Max/Msp]()
 - [TouchDesigner]()
