@@ -12,7 +12,7 @@
     <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.css" -->
     <!-- This is the theme we prefer, which we take from highlight.js directly -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/idea.min.css">
-    <title>Serial communication</title>
+    <title>ESP32</title>
     <style>
         .open-in-playground {
             background: #a42;
@@ -107,98 +107,69 @@
         <div class="slides">
             <section data-markdown>
                 <textarea data-template>
-# Serial communication
+# ESP 32
 
----
-## Can we print to a console?
+A popular micro-controller and follow-up model of the ESP8266, is the ESP32.
 
-You ran into the issue of wanting to debug something by now.
+The ESP8266 was the first affordable micro-controller with on-board wifi-chip and networking stack, kind of said to have kick-started the IoT-era.
 
-We can accomplish this by using serial communication!
-
----
-## Talking serial
-
-For two devices to communicate serially we have to establish a transmission rate, the so-called Baud rate.
-
-This is typically 9600 (pulses per second) but you can also choose faster ones (eg 115200).
-
-It's important though that both sides use the same Baud rate!
-
----
-## Both sides?
-
-We are now opening a two-way-channel between the Arduino and your computer.
-
-The Arduino will send (or read) at the Baud rate to your computers serial communication port.
-
-Your computer can read (or write) from that port. Right now it's the Arduino IDE's serial console that will do just that.
-
----
-## Endless possibilities
-
-Only one program at a time can read from the serial port!
-
-It doesn't have to be the Arduino IDE, but it's nice for debugging.
-
-It can be Unreal, Unity, Touch Designer, Max/MSP, your own Node script etc.
+The ESP32 is bascially the same but faster, more powerful, with Bluetooth and more pins. The total package!
 
 
 ---
-## Getting started
+## Pinout
 
-``` c
+![esp32 pinout](../assets/ESP32-pinout.jpg)
+
+---
+
+Some things to note are:
+
+- everything is 3.3V (no 5V available)
+
+- all pins are PWM
+
+- pins marked as **ADC** are analog-digital-converters, **DAC** are digital-analog-converters
+
+- pins marked at **touch** have build-in capacitive sensing
+
+
+---
+## Adding ESP to the IDE
+
+![Screenshot adding ESP to IDE](../assets/adding-esp-ide.png)
+
+---
+
+Uploading a hello-world-sketch!
+
+``` cpp
+
+#define LED 2
 
 void setup() {
-  # we have to initialize Serial in the setup
-  Serial.begin(9600);
-  # then we can print or println (with a line break)
-  Serial.println("Done with setup entering loop");
+  Serial.begin(115200);
+  pinMode(LED, OUTPUT);
 }
 
 void loop() {
-  Serial.print("loop");
-  delay(500);
+  digitalWrite(LED, HIGH);
+  Serial.println("LED is on");
+  delay(1000);
+  digitalWrite(LED, LOW);
+  Serial.println("LED is off");
+  delay(1000);
 }
 
 ```
 
 ---
-## Reading
 
-We can also read from Serial, very useful when data comes from a program and the Arduino should act on it.
-
-``` c
-
-const int ledPin = 9;
-
-void setup() {
-  pinMode(ledPin, OUTPUT);
-  Serial.begin(9600);
-  Serial.println("Done with setup entering loop");
-}
-
-void loop() {
-  String reading;
-
-  if (Serial.available()) {
-    reading = Serial.readString();
-    reading.trim();
-    if (reading == "on") {
-      digitalWrite(ledPin, HIGH);
-    } else if (reading == "off") {
-      digitalWrite(ledPin, LOW);
-    }
-  }
-}
-
-```
-
-We can .read() (bytes) or .readString() (String), depending on what data you have. Also look into documentation online!
+Note that some ESP32 development boards **don’t go into flashing/uploading mode automatically** when uploading a new code and you’ll see a lot of dots on the debugging window followed by an error message. If that’s the case, you need to **press the ESP32 BOOT button** when you start seeing the dots on the debugging window.
 
 ---
 
-![serial console](../assets/serial.png)
+We're ready to go!
 
                 </textarea>
             </section>

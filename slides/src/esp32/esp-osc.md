@@ -4,8 +4,6 @@ OSC stands for [Open Sound Control](https://en.wikipedia.org/wiki/Open_Sound_Con
 
 It's a widely popular real-time protocol in the event, music and creative tech scene and great for communicating between different programs on the same computer or on different computers. And it's easy to use! All our dreams come true!
 
----
-
 ## OSC words
 
 There is some lingo in  the OSC world:
@@ -31,22 +29,16 @@ There are multiple libraries implementing OSC for Arduino/ESP, we'll be using [O
 
 Go ahead and download it via the Arduino IDE's package manager.
 
----
-
 ## Example time!
 
 Open up the `OSC/ESP8266sendMessage` example.
 
 Let's look throught the code. What is familiar from the web server example? What is different?
 
-
----
-
 ## Just enough networking to get by
 
 What are UDP, IP and port?
 
----
 
 ## Exercise time
 
@@ -62,7 +54,7 @@ Adjust the code in the example and have some networking fun!
 
 - Do you have a programm that can read OSC from the network? If not I have a PureData patch and a Godot Project prepared for this in the "Your environment" section. (Feel free to send me patches, sketches, sessions and projects from your favourite tool for the collection)
 
-- Flash the baord and read the incoming messages!
+- Flash the board and read the incoming messages!
 
 ---
 

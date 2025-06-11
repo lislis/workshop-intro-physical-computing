@@ -6,12 +6,12 @@ The ESP8266 was the first affordable micro-controller with on-board wifi-chip an
 
 The ESP32 is bascially the same but faster, more powerful, with Bluetooth and more pins. The total package!
 
----
 
 ## Pinout
 
 ![esp32 pinout](../assets/ESP32-pinout.jpg)
 
+---
 
 Some things to note are:
 
@@ -23,7 +23,6 @@ Some things to note are:
 
 - pins marked at **touch** have build-in capacitive sensing
 
----
 
 ## Adding ESP to the IDE
 
@@ -55,7 +54,7 @@ void loop() {
 
 ---
 
-Note: some ESP32 development boards don’t go into flashing/uploading mode automatically when uploading a new code and you’ll see a lot of dots on the debugging window followed by an error message. If that’s the case, you need to press the ESP32 BOOT button when you start seeing the dots on the debugging window.
+Note that some ESP32 development boards **don’t go into flashing/uploading mode automatically** when uploading a new code and you’ll see a lot of dots on the debugging window followed by an error message. If that’s the case, you need to **press the ESP32 BOOT button** when you start seeing the dots on the debugging window.
 
 ---
 
