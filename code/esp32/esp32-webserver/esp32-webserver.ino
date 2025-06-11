@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
-#define WIFI_SSID "xxxxxxxxxxx" // change with your own wifi ssid
-#define WIFI_PASS "1234" // change with your own wifi password
+#define WIFI_SSID "hardware-network" // change with your own wifi ssid
+#define WIFI_PASS "alotofraspberrytarts" // change with your own wifi password
 
 #define PORT 80
 
@@ -48,13 +48,12 @@ void loop() {
   WiFiClient client = server.available();   
 
   if (client) {                            
-    currentTime = millis();
-    previousTime = currentTime;
+
     Serial.println("New Client.");          
     String currentLine = "";               
     
-    while (client.connected() && currentTime - previousTime <= timeoutTime) { 
-      currentTime = millis();
+    while (client.connected()) { 
+
       if (client.available()) {             
         char c = client.read();             
         Serial.write(c);                   
@@ -94,7 +93,9 @@ void loop() {
             client.println("<body><h1>ESP32 Web Server</h1>");
             
             // Display current state, and ON/OFF buttons for GPIO 26  
-            client.println("<p>GPIO 26 - State " + digitalRead(output26) + "</p>");
+            client.println("<p>GPIO 26 - State ");
+            client.println(digitalRead(output26));
+            client.println("</p>");
             // If the output26State is off, it displays the ON button       
             if (digitalRead(output26) == LOW) {
               client.println("<p><a href=\"/26/on\"><button class=\"button\">ON</button></a></p>");
@@ -103,7 +104,9 @@ void loop() {
             } 
               
             // Display current state, and ON/OFF buttons for GPIO 27  
-            client.println("<p>GPIO 27 - State " + digitalRead(output27) + "</p>");
+            client.println("<p>GPIO 27 - State ");
+            client.println(digitalRead(output27));
+            client.println("</p>");
             // If the output27State is off, it displays the ON button       
             if (digitalRead(output27) == LOW) {
               client.println("<p><a href=\"/27/on\"><button class=\"button\">ON</button></a></p>");
