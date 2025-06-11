@@ -9,7 +9,7 @@ The ESP32 is bascially the same but faster, more powerful, with Bluetooth and mo
 
 ## Pinout
 
-![esp32 pinout](../assets/ESP32-pinout.jpg)
+![esp32 pinout](../assets/ESP32-pinout.png)
 
 ---
 
