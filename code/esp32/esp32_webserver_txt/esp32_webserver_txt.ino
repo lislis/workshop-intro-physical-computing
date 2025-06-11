@@ -4,8 +4,8 @@
 
 #include <WiFi.h>
 
-#define WIFI_SSID "xxxxxxxxxxx" // change with your own wifi ssid
-#define WIFI_PASS "1234" // change with your own wifi password
+#define WIFI_SSID "ssid" // change with your own wifi ssid
+#define WIFI_PASS "xxxxxx" // change with your own wifi password
 
 #define PORT 80
 
@@ -52,13 +52,10 @@ void loop() {
   WiFiClient client = server.available();   
 
   if (client) {                            
-    currentTime = millis();
-    previousTime = currentTime;
     Serial.println("New Client.");          
     String currentLine = "";               
     
-    while (client.connected() && currentTime - previousTime <= timeoutTime) { 
-      currentTime = millis();
+    while (client.connected()) { 
       if (client.available()) {             
         char c = client.read();             
         Serial.write(c);                   
@@ -66,12 +63,11 @@ void loop() {
         client.println("GPIO 26," + digitalRead(output26));
         client.println("GPIO 27," + digitalRead(output27));
         client.println();
+        // Close the connection
+        client.stop();
+        Serial.println("Client disconnected.");
+        Serial.println("");
       }
     }
-
-    // Close the connection
-    client.stop();
-    Serial.println("Client disconnected.");
-    Serial.println("");
   }
 }
