@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
-#define WIFI_SSID "hardware-network" // change with your own wifi ssid
-#define WIFI_PASS "alotofraspberrytarts" // change with your own wifi password
+#define WIFI_SSID "ssid" // change with your own wifi ssid
+#define WIFI_PASS "xxxxxx" // change with your own wifi password
 
 #define PORT 80
 
