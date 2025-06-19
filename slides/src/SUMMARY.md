@@ -47,6 +47,7 @@
 
 # Your environment
 
+- [NodeJS](environments/nodejs.md)
 - [Godot](environments/godot.md)
 - [PureData](environments/puredata.md)
 
