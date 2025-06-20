@@ -25,8 +25,6 @@ void setup() {
   digitalWrite(output26, LOW);
   digitalWrite(output27, LOW);
 
-  WiFi.begin(WIFI_SSID, WIFI_PASS); 
-
   Serial.print("Connecting to ");
   Serial.println(WIFI_SSID);
   WiFi.begin(WIFI_SSID, WIFI_PASS); 
