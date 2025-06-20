@@ -48,6 +48,7 @@
 # Your environment
 
 - [NodeJS](environments/nodejs.md)
+- [openFrameworks](environments/of.md)
 - [Godot](environments/godot.md)
 - [PureData](environments/puredata.md)
 

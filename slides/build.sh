@@ -11,7 +11,7 @@ RUST_LOG=info mdbook build ${SCRIPT_DIR}
 echo "Building slides"
 RUST_LOG=debug mdslides --template ${SCRIPT_DIR}/template.html --output-dir ${SCRIPT_DIR}/html --mdbook-path ${SCRIPT_DIR} --index-template ${SCRIPT_DIR}/index-template.html
 # TODO: move assets copying to mdslides
-cp -r "${SCRIPT_DIR}/slides/assets" "${SCRIPT_DIR}/html/"
+cp -r "${SCRIPT_DIR}/src/assets" "${SCRIPT_DIR}/html/"
 # Then run the tests (which is slow)
 echo "Testing book"
 RUST_LOG=info mdbook test ${SCRIPT_DIR}
