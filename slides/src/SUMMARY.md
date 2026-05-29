@@ -28,8 +28,9 @@
 # Reading and sensing
 
 - [Analog values](sensors/analog.md)
+    - [[Circuit 2.1] Beep boop](sensors/circuit-6.md)
 - [Sensors](sensors/sensors.md)
-  - [[Circuit 2.1] Ultrasonic distance](sensors/circuit-1.md)
+  - [[Circuit 2.2] Ultrasonic distance](sensors/circuit-1.md)
 - [Arduino Libraries](sensors/libs.md)
 
 # Motors
