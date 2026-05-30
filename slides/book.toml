@@ -6,6 +6,7 @@ title = "Intro to Physical Computing"
 
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
+optional = true
 
 [output.html]
 preferred-dark-theme = "ayu"
