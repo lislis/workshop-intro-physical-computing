@@ -12,7 +12,7 @@
     <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.css" -->
     <!-- This is the theme we prefer, which we take from highlight.js directly -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/idea.min.css">
-    <title>LED stripes</title>
+    <title>[</title>
     <style>
         .open-in-playground {
             background: #a42;
@@ -107,34 +107,55 @@
         <div class="slides">
             <section data-markdown>
                 <textarea data-template>
-# LED stripes
+# [Circuit] Photoresistor and led stripe
 
-There's a variety of LED stripes out there, but the company Adafruit made a special one called the Neopixel where we can control every pixel individually! Nice!
+Let's combine input and output!
 
-Original Neopixels are fairly expensive but there are a bunch that are compatible with the [original library from Adafruit](https://github.com/adafruit/Adafruit_NeoPixel) like the WS2812b.
-
-The stripes come in various "densities", as in, how many pixels per 30cm strip. While very dense pixels might look cool, I'd usually prefer ones with a little more spacing, so we can cut and solder custom lengths.
-
-Cut and solder? Yes! The stripes usually expose their connections and you can just cut them with wire clippers and solder them back together, or extend them with cables or whatever you need to do. Just make sure the direction stays the same! The GND, VCC and data connectors have to match!
+Wire up a photoresistor and LED stripe like in the diagram.
 
 
----
-## Install the library
+![schematic](../assets/circuit-photo-led.png)
 
-![neopixel by adafruit](../assets/neopixel-library.png)
+Use and adjust the code. In the example the reading from the resistor is used in mboth the brightness and the color of the LEDs. But you can make your own rules!
 
-In the Arduino IDE, click on the library manager on the left and search for "neopixel". The "Adafruit Neopixel by Adafruit" is what we want. There are different others available, too. For for us the simple one is enough.
+How about until a threshold is reached, only the even numbered LEDs light up. And above the threshold only the odd numbers?
 
----
-## Open the simple example
 
-Under `File > Examples > Adafruit Neopixel > ` open the `simple` example. To connect you just have to connect VCC, GND and one data pin (adjust on line 10).
+``` c++
+#include <Adafruit_NeoPixel.h>
 
-Adjust the number of LEDs you want to light up (NUMPIXELS on line 14). And then try to run the code!
+#define PIN 6
+#define NUMPIXELS 30
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
-There specified number of pixels should light up in one color. Look at the code in the `loop`.
+const int photoresistor = A0;
 
-It's very similar to working with canvases in P5.js. `Clear` the pixels, set a color in RGB and call `show` to actually send the color data to the stripe!
+void setup() {
+  pixels.begin();
+  Serial.begin(9600);
+  pinMode(photoresistor, INPUT);
+}
+
+void loop() {
+  int reading = analogRead(photoresistor);
+  Serial.print(reading);
+  Serial.print(" ");
+
+  // mapping based on my current readings, please adjust accordingly!
+  int brightness = map(reading, 800, 1010, 50, 180);
+  Serial.println(brightness);
+
+  pixels.clear();
+  pixels.setBrightness(brightness);
+
+  for(int i=0; i<NUMPIXELS; i++) {
+    pixels.setPixelColor(i, pixels.Color(brightness, 0, 250 - brightness));
+  }
+  pixels.show();
+  delay(200);
+}
+
+```
 
                 </textarea>
             </section>

@@ -56,6 +56,7 @@
 # Misc
 
 - [LED stripes](misc/led-stripes.md)
+  - [[Circuit] Photoresistor and led stripe](misc/circuit-1.md)
 - [Building a MIDI controller](misc/midi-controller.md)
 - [Making a synthesizer](misc/arduino-synth.md)
 - [Control a synth in PureData](misc/puredata-synth.md)
