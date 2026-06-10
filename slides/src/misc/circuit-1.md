@@ -2,7 +2,7 @@
 
 Let's combine input and output!
 
-Wire up a photoresistor and LED stripe like in the diagram.
+Wire up a photoresistor and LED stripe like in the diagram. You also need one resitor of at least 1k.
 
 
 ![schematic](../assets/circuit-photo-led.png)
